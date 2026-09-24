@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ブラウザで使えるシンプルな電卓" />
+    <title>シンプル電卓</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator" aria-labelledby="calculator-title">
+      <h1 id="calculator-title">シンプル電卓</h1>
+      <output id="display" class="display" aria-live="polite">0</output>
+      <div class="keypad" aria-label="電卓のキー">
+        <button type="button" class="key utility" data-action="clear">AC</button>
+        <button type="button" class="key utility" data-action="delete" aria-label="1文字削除">⌫</button>
+        <button type="button" class="key operator" data-value="%">%</button>
+        <button type="button" class="key operator" data-value="/">÷</button>
+        <button type="button" class="key" data-value="7">7</button>
+        <button type="button" class="key" data-value="8">8</button>
+        <button type="button" class="key" data-value="9">9</button>
+        <button type="button" class="key operator" data-value="*">×</button>
+        <button type="button" class="key" data-value="4">4</button>
+        <button type="button" class="key" data-value="5">5</button>
+        <button type="button" class="key" data-value="6">6</button>
+        <button type="button" class="key operator" data-value="-">−</button>
+        <button type="button" class="key" data-value="1">1</button>
+        <button type="button" class="key" data-value="2">2</button>
+        <button type="button" class="key" data-value="3">3</button>
+        <button type="button" class="key operator" data-value="+">+</button>
+        <button type="button" class="key zero" data-value="0">0</button>
+        <button type="button" class="key" data-value=".">.</button>
+        <button type="button" class="key equals" data-action="equals">=</button>
+      </div>
+    </main>
+  </body>
+</html>

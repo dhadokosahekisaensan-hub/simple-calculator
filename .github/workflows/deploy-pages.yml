@@ -25,10 +25,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          mkdir --parents _site
+          cp index.html script.js styles.css _site/
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          # Upload only the published files. This keeps repository metadata and
+          # workflow files out of the Pages deployment artifact.
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
